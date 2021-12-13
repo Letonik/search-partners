@@ -1,0 +1,6 @@
+.searchContainer {
+  width: 692px;
+  @media only screen and (max-width: 767px) {
+    width: 293px;
+  }
+}

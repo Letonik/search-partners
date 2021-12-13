@@ -1,0 +1,14 @@
+@import '../../global';
+header {
+  background: #FFFFFF;
+  height: 90px;
+  padding-left: 120px;
+  @include flexJA(start, center);
+  img {
+    width: 120px;
+  }
+  @media only screen and (max-width: 767px) {
+    justify-content: center;
+    padding-left: 0;
+  }
+}

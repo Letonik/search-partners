@@ -1,0 +1,11 @@
+@import '../../global';
+$barBg: url("../Images/map.jpg");
+.searchBar {
+  height: 600px;
+  @media only screen and (min-width: 1260px) {
+    height: 480px;
+  }
+  background-image: $barBg;
+  background-position: center;
+  @include flexJA(center, center)
+}

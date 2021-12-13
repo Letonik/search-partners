@@ -1,0 +1,64 @@
+@import '../../global';
+.partnerCard {
+  @include flexJA(center, start);
+  background: $colorWhite;
+  color: $colorBlack;
+  width: 1110px;
+  padding: 35px 20px;
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  >div {
+    padding: 0 40px;
+  }
+  .image {
+    width: 195px;
+    align-self: center;
+    text-align: center;
+  }
+  .info {
+    width: 475px;
+    .company {
+      font-size: 21px;
+      line-height: 32px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .address {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+  .contacts {
+    width: 200px;
+    border-right: 1px solid $borderGray;
+    .site {
+      margin-bottom: 20px;
+    }
+    .phone {
+      font-size: 13px;
+      line-height: 32px;
+    }
+  }
+  .type {
+    width: 200px;
+  }
+  @media only screen and (max-width: 767px) {
+    box-sizing: border-box;
+    flex-direction: column;
+    width: 290px;
+    min-width: 200px;
+    padding: 35px;
+    .image, .info, .contacts, .type {
+      width: 100%;
+      padding: 20px 0;
+    }
+    .image {
+      text-align: left;
+    }
+    .contacts {
+      border-right: none;
+      border-bottom: 1px solid $borderGray;
+    }
+  }
+}

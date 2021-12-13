@@ -1,0 +1,57 @@
+@import '../../../global';
+.search {
+  @media only screen and (min-width: 1260px) {
+    padding: 0 30px;
+  }
+  .inputWrapper {
+    position: relative;
+    margin-bottom: 20px;
+    input {
+      font-family: "Open Sans";
+      font-weight: 300;
+      border: none;
+      border-radius: 4px;
+      height: 45px;
+      box-sizing: border-box;
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 45px;
+    }
+    button {
+      position: absolute;
+      right: 10px;
+      border: none;
+      background: rgba(255, 255, 255, 0);
+      height: 100%;
+      font-size: 15px;
+      cursor: pointer;
+      color: $colorSearchButton;
+      &:hover {
+        font-size: 20px;
+      }
+    }
+  }
+  .selectWrapper {
+    @include flexJA(space-between, center);
+    .typeWrapper, .countryWrapper, .stateWrapper {
+      flex-grow: 1;
+      margin-bottom: 7px;
+    }
+    @media only screen and (max-width: 767px) {
+      flex-direction: column;
+      >div{
+        width: 100%;
+      }
+    }
+    .typeWrapper {
+      @media only screen and (min-width: 1260px) {
+        margin-right: 12px;
+      }
+    }
+    .countryWrapper, .stateWrapper, .typeWrapper {
+      @media only screen and (min-width: 1260px) {
+        width: 33%;
+      }
+    }
+  }
+}
